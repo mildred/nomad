@@ -172,6 +172,9 @@ type ClientConfig struct {
 	// CpuCompute is used to override any detected or default total CPU compute.
 	CpuCompute int `mapstructure:"cpu_total_compute"`
 
+	// MemoryMB is used to override any detected or default total memory.
+	MemoryMB int `mapstructure:"total_memory"`
+
 	// MaxKillTimeout allows capping the user-specifiable KillTimeout.
 	MaxKillTimeout string `mapstructure:"max_kill_timeout"`
 
@@ -1054,6 +1057,9 @@ func (a *ClientConfig) Merge(b *ClientConfig) *ClientConfig {
 	}
 	if b.CpuCompute != 0 {
 		result.CpuCompute = b.CpuCompute
+	}
+	if b.MemoryMB != 0 {
+		result.MemoryMB = b.MemoryMB
 	}
 	if b.MaxKillTimeout != "" {
 		result.MaxKillTimeout = b.MaxKillTimeout

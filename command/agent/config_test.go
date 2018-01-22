@@ -81,6 +81,7 @@ func TestConfig_Merge(t *testing.T) {
 			},
 			NetworkSpeed:   100,
 			CpuCompute:     100,
+			MemoryMB:       200,
 			MaxKillTimeout: "20s",
 			ClientMaxPort:  19996,
 			Reserved: &Resources{
@@ -214,6 +215,7 @@ func TestConfig_Merge(t *testing.T) {
 			ClientMinPort:  22000,
 			NetworkSpeed:   105,
 			CpuCompute:     105,
+			MemoryMB:       205,
 			MaxKillTimeout: "50s",
 			Reserved: &Resources{
 				CPU:                 15,

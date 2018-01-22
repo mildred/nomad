@@ -64,6 +64,7 @@ func TestConfig_Parse(t *testing.T) {
 					NetworkInterface: "eth0",
 					NetworkSpeed:     100,
 					CpuCompute:       4444,
+					MemoryMB:         5555,
 					MaxKillTimeout:   "10s",
 					ClientMinPort:    1000,
 					ClientMaxPort:    2000,
